@@ -1,0 +1,19 @@
+:root{color-scheme:light dark;--bg:#e9eaee;--bar:#fff;--fg:#1c1c1e;--mute:#6e6e73;--tab:#f6f6f8;--hover:#0001;--accent:#3b82f6}
+@media (prefers-color-scheme:dark){:root{--bg:#1f2024;--bar:#2b2c31;--fg:#f2f2f5;--mute:#9a9aa2;--tab:#34353b;--hover:#fff2}}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--fg);font:13px system-ui,"Segoe UI",sans-serif;user-select:none;overflow:hidden}
+#strip{height:38px;display:flex;align-items:flex-end;padding:0 8px;gap:2px}
+#tabs{display:flex;gap:2px;min-width:0;flex:0 1 auto;max-width:calc(100% - 44px)}
+.tab{display:flex;align-items:center;gap:6px;height:32px;padding:0 8px 0 10px;min-width:40px;width:210px;flex:0 1 210px;border-radius:10px 10px 0 0;color:var(--mute);cursor:default}
+.tab:hover{background:var(--hover)} .tab.on{background:var(--bar);color:var(--fg)}
+.tab img,.tab i{width:16px;height:16px;flex:none;border-radius:3px} .tab i{border:2px solid var(--accent);border-top-color:transparent;border-radius:50%;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.tab span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tab b{width:18px;height:18px;line-height:17px;text-align:center;border-radius:50%;font-weight:400;flex:none}.tab b:hover{background:var(--hover)}
+#new{margin:0 0 4px 4px}
+#bar{height:46px;background:var(--bar);display:flex;align-items:center;gap:4px;padding:0 8px}
+button{background:none;border:0;color:var(--fg);width:30px;height:30px;border-radius:8px;font-size:16px;cursor:pointer;flex:none}
+button:hover:not(:disabled){background:var(--hover)} button:disabled{opacity:.3;cursor:default}
+#omni{flex:1;display:flex;align-items:center;height:32px;border-radius:16px;background:var(--bg);padding:0 4px 0 14px;border:1px solid transparent}
+#omni:focus-within{border-color:var(--accent)} #lock{font-size:11px;color:var(--mute);margin-right:6px}
+#url{flex:1;min-width:0;border:0;background:none;color:var(--fg);font:inherit;font-size:14px;outline:none;user-select:text}
+#star.on{color:#f5b301}

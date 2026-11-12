@@ -1,0 +1,6 @@
+{
+  "productName": "Browser",
+  "appId": "com.example.browser",
+  "internalScheme": "browser",
+  "defaultSearchEngine": "google"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "browser",
+  "productName": "Browser",
+  "version": "0.1.0",
+  "description": "A Chromium-based desktop browser (Stage 1: foundation)",
+  "main": "src/main/main.js",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test tests/unit/*.test.js",
+    "test:e2e": "node tests/e2e/run.js",
+    "dist:win": "electron-builder --win zip --x64 --config electron-builder.config.js"
+  },
+  "devDependencies": {
+    "electron": "^41.0.0",
+    "electron-builder": "^26.0.0",
+    "playwright-core": "^1.50.0"
+  }
+}
